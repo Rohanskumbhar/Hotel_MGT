@@ -1,0 +1,32 @@
+create database HotelMGT;
+use HotelMGt;
+show tables;
+create table login(username varchar(100),password varchar(25));
+insert into login values("Rohan",'Rohan123');
+select * from login;
+set sql_safe_updates=0;
+UPDATE login SET password = '1234' WHERE username = 'Rohan';
+
+create table employee(name varchar(25),age varchar(10),gender varchar(25),job varchar(30),salary varchar(10),phone varchar(15),email varchar(50),aadhar varchar(15));
+UPDATE employee SET age = '21' WHERE age = 'kumbhar';
+select * from employee;
+
+create table room(roomno varchar(10),avaibility varchar(20),status varchar(20),price varchar(20),type varchar(20));
+update room set avaibility='Available' where avaibility='occupied';
+DROP TABLE room;
+select * from room;
+  
+create table drivers(name varchar(20),age varchar(20),gender varchar(20),company varchar(30),model varchar(30),avaibility2 varchar(30),location varchar(30));
+select * from drivers;
+
+create table customer(document varchar(20),number varchar(20),name varchar(20),gender varchar(20),country varchar(20),room varchar(20),checkintime varchar(100),entdeposite varchar(20));
+select * from customer;
+
+create table department(department varchar(50),budget varchar(50));
+
+insert into department values('Front Office','500000');
+insert into department values('HouseKeeping','40000');
+insert into department values('Food and Bevrages','23000');
+insert into department values('Kitchen and Food Production','550000');
+insert into department values('Security','35000');
+select * from department ;
